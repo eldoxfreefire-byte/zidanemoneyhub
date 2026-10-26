@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100600">
+<meta name="description" content="Welcome to NEXTGEN INCOME community.">
+<title>𝗭𝗜𝗗𝗔𝗡𝗘 𝗛𝗨𝗕📈</title>
+
+<!-- META PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;
+n=f.fbq=function(){
+n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)
+};
+if(!f._fbq)f._fbq=n;
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
+t=b.createElement(e);
+t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init','949624798217870');
+fbq('track','PageView');
+</script>
+<!-- END META PIXEL -->
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --orange: #ff7900;
+  --light-orange: #ffd1a3;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  background:
+    radial-gradient(ellipse at top, #512000 0%, transparent 55%),
+    linear-gradient(160deg, #1a0a00, #100600 70%, #000);
+}
+
+#particles {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow {
+  position: fixed;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: #ff790020;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.glow-one {
+  top: -100px;
+  left: -80px;
+}
+
+.glow-two {
+  bottom: -100px;
+  right: -80px;
+}
+
+.card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 440px;
+  padding: 32px 23px;
+  text-align: center;
+  background: rgba(24, 10, 2, .96);
+  border: 1px solid #ff790070;
+  border-radius: 26px;
+  box-shadow:
+    0 0 25px #ff790020,
+    0 0 65px #ff790015,
+    inset 0 0 25px #ff790008;
+  animation: appear .8s ease;
+}
+
+.badge {
+  display: inline-block;
+  padding: 9px 15px;
+  margin-bottom: 25px;
+  color: var(--light-orange);
+  background: #ff790012;
+  border: 1px solid #ff790050;
+  border-radius: 30px;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.profile-ring {
+  width: 155px;
+  height: 155px;
+  padding: 5px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #ff7900,
+    #ffe0bd,
+    #d64b00,
+    #ff7900
+  );
+  box-shadow:
+    0 0 20px #ff790090,
+    0 0 45px #ff790035;
+  animation: rotate-ring 8s linear infinite;
+}
+
+.profile-inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 4px solid #1a0a00;
+  border-radius: 50%;
+  background: #281000;
+}
+
+.profile-inner img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+h1 {
+  margin-bottom: 14px;
+  color: var(--orange);
+  font-size: clamp(25px, 7vw, 34px);
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+  text-shadow:
+    0 0 10px #ff790070,
+    0 0 25px #ff790040;
+}
+
+.subtitle {
+  max-width: 330px;
+  margin: 0 auto 25px;
+  color: #d8c0ae;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.divider {
+  width: 85px;
+  height: 3px;
+  margin: 0 auto 25px;
+  background: var(--orange);
+  border-radius: 10px;
+  box-shadow: 0 0 15px var(--orange);
+}
+
+.info-box {
+  padding: 19px 15px;
+  margin-bottom: 25px;
+  background: #ff790009;
+  border: 1px solid #ff790035;
+  border-radius: 15px;
+}
+
+.info-title {
+  margin-bottom: 9px;
+  color: var(--light-orange);
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.info-text {
+  color: #d8c7ba;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* TELEGRAM BUTTON */
+.telegram-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 76px;
+  padding: 20px 12px;
+  margin: 10px 0 22px;
+  color: #241000;
+  background: linear-gradient(
+    110deg,
+    #ff7900,
+    #ffe0bd,
+    #ff7900
+  );
+  background-size: 200% 100%;
+  border: 2px solid #ffe0bd;
+  border-radius: 16px;
+  text-decoration: none;
+  font-size: clamp(14px, 4vw, 17px);
+  font-weight: 900;
+  letter-spacing: .5px;
+  box-shadow:
+    0 0 12px #ff7900,
+    0 0 28px #ff790090,
+    0 0 55px #ff790045;
+  animation:
+    button-glow 1.8s ease-in-out infinite,
+    gradient-move 3s linear infinite;
+  transition: transform .2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.telegram-button:hover {
+  transform: scale(1.025);
+}
+
+.telegram-button:active {
+  transform: scale(.98);
+}
+
+.telegram-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.note {
+  color: #a8917e;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+footer {
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px solid #ff790025;
+  color: #a8917e;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.online-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 7px;
+  background: var(--orange);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--orange);
+}
+
+@keyframes rotate-ring {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes button-glow {
+  0%, 100% {
+    box-shadow:
+      0 0 12px #ff7900,
+      0 0 28px #ff790090,
+      0 0 55px #ff790045;
+  }
+  50% {
+    box-shadow:
+      0 0 20px #ff7900,
+      0 0 42px #ff7900,
+      0 0 75px #ff790070;
+  }
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 360px) {
+  .card {
+    padding: 27px 16px;
+  }
+
+  .profile-ring {
+    width: 135px;
+    height: 135px;
+  }
+
+  .telegram-button {
+    min-height: 70px;
+    padding: 18px 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="particles" aria-hidden="true"></canvas>
+
+<div class="glow glow-one"></div>
+<div class="glow glow-two"></div>
+
+<main class="card">
+
+  <div class="badge">WELCOME TO OUR COMMUNITY</div>
+
+  <div class="profile-ring">
+    <div class="profile-inner">
+      <img
+        src="IMG-20261018-WA0004.jpg"
+        alt="NEXTGEN INCOME profile"
+        onerror="this.style.display='none';"
+      >
+    </div>
+  </div>
+
+  <h1></h1>
+
+  <p class="subtitle">
+    
+  </p>
+
+  <div class="divider"></div>
+
+  <div class="info-box">
+    <div class="info-title">
+      📈 𝗠𝗢𝗡𝗘𝗬 INCOME COMMUNITY
+    </div>
+
+    <p class="info-text">
+      
+    </p>
+  </div>
+
+  <a
+    class="telegram-button"
+    id="telegramButton"
+    href="https://t.me/+tGOhOq9Kr4A3MzA1"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Join ZYDANE INCOME on Telegram"
+  >
+
+    <svg
+      class="telegram-icon"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M21.7 2.3a1.5 1.5 0 0 0-1.55-.25L2.5 8.9a1.6 1.6 0 0 0 .12 3.03l4.55 1.42 1.7 5.35a1.6 1.6 0 0 0 2.8.5l2.55-3.1 4.25 3.12a1.6 1.6 0 0 0 2.52-.95l2.8-14.4a1.6 1.6 0 0 0-.09-1.57ZM9.05 12.55l8.85-6.1-6.9 7.4-.35 3.2-1.6-4.5Zm10.35 5.1-5.1-3.75 5.8-8.3-2.1 12.05a.5.5 0 0 1-.6 0Z"/>
+    </svg>
+
+    JOIN COMMUNITY
+
+  </a>
+
+  <p class="note">
+    
+  </p>
+
+  <footer>
+    <span class="online-dot"></span>
+    NEXTGEN INCOME &nbsp; • &nbsp; COMMUNITY
+  </footer>
+
+</main>
+
+<script>
+// META PIXEL LEAD EVENT
+// Fires when a visitor clicks the Telegram button.
+// Does not confirm that the visitor joined the group.
+document.getElementById('telegramButton').addEventListener('click', function () {
+  if (typeof window.fbq === 'function') {
+    fbq('track', 'Lead');
+  }
+});
+
+// ANIMATED ORANGE PARTICLES
+(function () {
+  const canvas = document.getElementById('particles');
+  const ctx = canvas.getContext('2d');
+
+  if (!ctx) return;
+
+  let width = 0;
+  let height = 0;
+  let particles = [];
+  let animationId = null;
+
+  const reducedMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+  ).matches;
+
+  function resizeCanvas() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    width = window.innerWidth;
+    height = window.innerHeight;
+
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    const count = Math.min(
+      55,
+      Math.max(20, Math.floor(width / 8))
+    );
+
+    particles = Array.from({ length: count }, function () {
+      return {
+        x: Math.random() * width,
+        y: Math.random() * height,
+        size: Math.random() * 2 + 0.5,
+        speed: Math.random() * 0.35 + 0.1,
+        opacity: Math.random() * 0.55 + 0.15
+      };
+    });
+
+    if (reducedMotion) drawStatic();
+  }
+
+  function drawStatic() {
+    ctx.clearRect(0, 0, width, height);
+
+    particles.forEach(function (p) {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,121,0,' + p.opacity + ')';
+      ctx.fill();
+    });
+  }
+
+  function animate() {
+    ctx.clearRect(0, 0, width, height);
+
+    particles.forEach(function (p) {
+      p.y -= p.speed;
+
+      if (p.y < -5) {
+        p.y = height + 5;
+        p.x = Math.random() * width;
+      }
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(255,121,0,' + p.opacity + ')';
+      ctx.fill();
+    });
+
+    animationId = requestAnimationFrame(animate);
+  }
+
+  window.addEventListener('resize', resizeCanvas);
+
+  resizeCanvas();
+
+  if (!reducedMotion) {
+    animate();
+  }
+})();
+</script>
+
+</body>
+</html>
+<script>
+const telegramLink = "https://t.me/+tGOhOq9Kr4A3MzA1";
+let seconds = ;
+
+const countdown = document.getElementById("countdown");
+
+const timer = setInterval(() => {
+  seconds--;
+  if (countdown) countdown.textContent = seconds;
+
+  if (seconds <= 0) {
+    clearInterval(timer);
+    window.location.href = telegramLink;
+  }
+}, 1000);
+</script>
